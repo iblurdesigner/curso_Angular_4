@@ -1,5 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Platzisquare</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
   <h1>
     Bienvenido a {{ title }}!
   </h1>
@@ -7,21 +29,19 @@
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
   </agm-map>
   <hr/>
-  <ul>
-    <ng-container *ngFor="let lugar of lugares">
-      <li *ngIf="lugar.active">{{lugar.nombre}}</li>
-    </ng-container>
-  </ul>
-  <ul>
-    <ng-container *ngFor="let lugar of lugares; let i=index" [ngSwitch]="lugar.cercania">
-      <a>
-        <li contar-clicks [ngStyle]="{color: (lugar.active) ? 'green' : 'gray'}" [ngClass]="{'numero_par': (i+1)%2 !==0}" [resaltar]="lugar.plan">
-          {{lugar.nombre}} -
-          <span *ngSwitchCase="1" [ngStyle]="{color: 'green'}">Muy cercano</span>
-          <span *ngSwitchCase="2" [ngStyle]="{color: 'orange'}">Cercano</span>
-          <span *ngSwitchCase="3" [ngStyle]="{color: 'red'}">Lejano</span>
-        </li>
-      </a>
-    </ng-container>
-  </ul>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Lugares cercanos</h2>
+        <ul class="list-group">
+          <ng-container *ngFor="let lugar of lugares">
+            <li *ngIf="lugar.active" class="list-group-item">{{lugar.nombre}}</li>
+          </ng-container>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h2>Destacados</h2>
+      </div>
+    </div>
+  </div>
 </div>

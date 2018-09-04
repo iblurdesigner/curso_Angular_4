@@ -6,6 +6,8 @@ import {FormsModule} from "@angular/forms";
 import { AgmCoreModule } from '@agm/core';
 import {ResaltarDirective} from './directives/resaltar.directive';
 import {ContarClicksDirective} from './directives/contar-clicks.directive';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import {ContarClicksDirective} from './directives/contar-clicks.directive';
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAKK4TB9Cwn_XbTN3ZEP3_RyqoNRpVjdq8'
-    })
+    }),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

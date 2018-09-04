@@ -1,3 +1,21 @@
+commit 1240020eaff50917999c03e26ba33e285861ebff
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Mon Sep 3 19:30:58 2018 -0500
+
+    Host biding
+
+commit 457bd17e857399f6ddc62d7356c9a582e1abe8f3
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Mon Sep 3 19:23:17 2018 -0500
+
+    Host Listeners
+
+commit 532b31a4950184b4ceaf3da5c482d638a028ea61
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Mon Sep 3 18:11:19 2018 -0500
+
+    Directivas propias de atributo
+
 commit b77b99ff4bbf321688bfaecc1c09e9c90d214338
 Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
 Date:   Wed Aug 29 16:47:25 2018 -0500
