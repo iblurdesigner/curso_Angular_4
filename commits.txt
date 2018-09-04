@@ -1,3 +1,9 @@
+commit f428096c6c8dc0e3d38bb0db79b104f372857364
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Tue Sep 4 15:35:10 2018 -0500
+
+    Implementabdo Bootstrap 4
+
 commit 1240020eaff50917999c03e26ba33e285861ebff
 Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
 Date:   Mon Sep 3 19:30:58 2018 -0500

@@ -21,27 +21,5 @@
       </form>
     </div>
   </nav>
-
-  <h1>
-    Bienvenido a {{ title }}!
-  </h1>
-  <agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>
-  <hr/>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <h2>Lugares cercanos</h2>
-        <ul class="list-group">
-          <ng-container *ngFor="let lugar of lugares">
-            <li *ngIf="lugar.active" class="list-group-item">{{lugar.nombre}}</li>
-          </ng-container>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h2>Destacados</h2>
-      </div>
-    </div>
-  </div>
 </div>
+<router-outlet></router-outlet>
