@@ -1,3 +1,15 @@
+commit fc841b0a2faf4df6c6bb88d85a78c349d0a5eba1
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Wed Sep 5 09:02:31 2018 -0500
+
+    Parametros en Rutas
+
+commit 558e906155f7e4617ed9d9362a010eef4e40f01e
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Tue Sep 4 17:21:22 2018 -0500
+
+    Resaltando el link activo con CSS para indicar visualmente en que componente nos encontramos
+
 commit 97db5404642b71b223f72307af2741fa8aa6a32d
 Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
 Date:   Tue Sep 4 16:56:32 2018 -0500
