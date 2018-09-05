@@ -12,12 +12,19 @@ import {DetalleComponent} from './detalle/detalle.component';
 import {LugaresComponent} from './lugares/lugares.component';
 import {ContactoComponent} from './contacto/contacto.component';
 import {LugaresService} from './services/lugares.service';
+import {environment} from '../environments/environment';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
+import {CrearComponent} from './crear/crear.component';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
 
 const appRoutes: Routes = [
   {path: '', component: LugaresComponent},
   {path: 'lugares', component: LugaresComponent},
   {path: 'detalle/:id', component: DetalleComponent},
   {path: 'contacto', component: ContactoComponent},
+  {path: 'crear', component: CrearComponent},
 ];
 
 @NgModule({
@@ -27,7 +34,8 @@ const appRoutes: Routes = [
     ContarClicksDirective,
     DetalleComponent,
     LugaresComponent,
-    ContactoComponent
+    ContactoComponent,
+    CrearComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,12 @@ const appRoutes: Routes = [
       apiKey: 'AIzaSyAKK4TB9Cwn_XbTN3ZEP3_RyqoNRpVjdq8'
     }),
     NgbModule.forRoot(),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   providers: [LugaresService],
   bootstrap: [AppComponent]
