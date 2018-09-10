@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBOdCefZ0LXSFVBmOUSMhOa4FlPaqigqLk",
-    authDomain: "blurzisquare.firebaseapp.com",
-    databaseURL: "https://blurzisquare.firebaseio.com",
-    projectId: "blurzisquare",
-    storageBucket: "blurzisquare.appspot.com",
-    messagingSenderId: "835646730916"
+    apiKey: "AIzaSyBo9_sy3NVndxu_Uul3K34dK1FhozOIOSE",
+    authDomain: "novasquare-a0841.firebaseapp.com",
+    databaseURL: "https://novasquare-a0841.firebaseio.com",
+    projectId: "novasquare-a0841",
+    storageBucket: "novasquare-a0841.appspot.com",
+    messagingSenderId: "554118775697"
   }
 };
 

@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
 import {AngularFireDatabase} from 'angularfire2/database';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 
 @Injectable()
 export class LugaresService{
+  API_ENDPOINT = 'https://novasquare-a0841.firebaseio.com';
   lugares: any = [
     {id: 1, plan: 'pagado', cercania: 1, distancia: 1, active: false, nombre: 'Floreria'},
     {id: 2, plan: 'gratuito', cercania: 1, distancia: 1.8, active: true, nombre: 'Doneria'},
@@ -21,7 +22,9 @@ export class LugaresService{
     return this.lugares.filter((lugar) => {return lugar.id == id})[0] || null;
   }
   public guardarLugar(lugar) {
-    this.afDB.database.ref('lugares/' + lugar.id).set(lugar);
+    // this.afDB.database.ref('lugares/' + lugar.id).set(lugar);
+    const headers = new HttpHeaders({"Content-Type": "application/json"});
+    return this.http.post(this.API_ENDPOINT + '/lugares.json', lugar, { headers: headers }).subscribe();
   }
   public editarLugar(lugar) {
     this.afDB.database.ref('lugares/' + lugar.id).set(lugar);

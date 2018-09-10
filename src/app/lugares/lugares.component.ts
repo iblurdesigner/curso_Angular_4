@@ -6,7 +6,7 @@ import {LugaresService} from '../services/lugares.service';
   templateUrl: './lugares.component.html'
 })
 export class LugaresComponent {
-  title = 'Platzisquare';
+  title = 'Novasquare';
 
   lat:number = -0.261479;
   lng:number = -78.5593177;
