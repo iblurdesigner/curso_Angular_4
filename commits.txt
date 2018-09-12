@@ -1,3 +1,39 @@
+commit 9c896058827711221118b8a25e20c0d2a0abeffb
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Wed Sep 12 11:32:21 2018 -0500
+
+    Cambio a la Base de Datos de Firebase GNM
+
+commit 9fa3e59f7e972b351a69bc4df77e7104ca65c085
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Wed Sep 5 17:19:39 2018 -0500
+
+    Guardando Records en Firebase
+
+commit 27312d65afc1fa64b8d50058d650e30e947ae7ad
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Wed Sep 5 13:17:45 2018 -0500
+
+    Creando nuestro propio servicio
+
+commit 4ffeec396675eeec36cae5a1e228d213443af2ae
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Wed Sep 5 11:52:30 2018 -0500
+
+    Pagina de contacto
+
+commit bfb142d91613defb098ab66785ef390c662294d5
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Wed Sep 5 10:02:18 2018 -0500
+
+    Creando una vista de detalle para el proyecto
+
+commit d4ebd203747b800be0c923c4114f251f7115af5a
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Wed Sep 5 09:24:43 2018 -0500
+
+    Parametros tipo query
+
 commit fc841b0a2faf4df6c6bb88d85a78c349d0a5eba1
 Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
 Date:   Wed Sep 5 09:02:31 2018 -0500
