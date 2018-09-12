@@ -1,3 +1,15 @@
+commit 64089f8d7ad28d8e225c0da9ebb5e39a773ea139
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Wed Sep 12 08:53:57 2018 -0500
+
+    MODIFICACION - obteniendo coordenadas usando Geocoding
+
+commit 727d00ec096b644d72b66bc88e29465331e53ee9
+Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
+Date:   Mon Sep 10 15:21:25 2018 -0500
+
+    Enviando llamados tipo POST
+
 commit 42bcff1804f4214e07dcace6b14ccb688254a995
 Author: “iblurdesigner” <nevomen@gmail.com”git config --global user.emailgit config --global user.email nevomen@gmail.com”>
 Date:   Fri Sep 7 10:55:29 2018 -0500
