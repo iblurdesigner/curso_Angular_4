@@ -22,11 +22,11 @@ export class CrearComponent {
   guardarLugar() {
     const direccion = this.lugar.calle + ',' + this.lugar.ciudad + ',' + this.lugar.pais;
     this.lugaresService.obtenerGeoData(direccion)
-      .subscribe((result: GeoInterface) => {
+      .subscribe((result: any) => {
         this.lugar.lat = result.results[0].geometry.location.lat;
         this.lugar.lng = result.results[0].geometry.location.lng;
         if (this.id != 'new') {
-          this.lugaresService.editarLugar(this.lugar);
+          this.lugaresService.guardarLugar(this.lugar);
           alert('Negocio editado con exito!');
         } else {
           this.lugar.id = Date.now();

@@ -23,11 +23,15 @@ export class LugaresService{
   }
   public guardarLugar(lugar) {
     // this.afDB.database.ref('lugares/' + lugar.id).set(lugar);
-    const headers = new HttpHeaders({"Content-Type": "application/json"});
-    return this.http.post(this.API_ENDPOINT + '/lugares.json', lugar, { headers: headers }).subscribe();
+    try {
+      const headers = new HttpHeaders({"Content-Type": "application/json"});
+      return this.http.post(this.API_ENDPOINT + '/lugares.json', lugar, { headers: headers }).subscribe();
+    } catch (exception) {
+        alert('Error: ' + exception);
+    }
   }
   public editarLugar(lugar) {
-    this.afDB.database.ref('lugares/' + lugar.id).set(lugar);
+    this.afDB.database.ref(`lugares/${lugar.id}`).set(lugar);
   }
   public obtenerGeoData(direccion) {
     // http://maps.google.com/maps/api/geocode/json?address=9-55+calle+72,+Bogota,Colombia
