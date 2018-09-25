@@ -1,11 +1,12 @@
 import {Injectable} from '@angular/core';
 import {AngularFireDatabase} from 'angularfire2/database';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {GeoInterface} from '../interface/response-geoapi.interface';
 
 @Injectable()
-export class LugaresService{
-  lugares:any = [
+export class LugaresService {
+  API_ENDPOINT = 'https://novasquare-a0841.firebaseio.com';
+  lugares: any = [
     {id: 1, plan: 'pagado', cercania: 1, distancia: 1, active: false, nombre: 'Floreria'},
     {id: 2, plan: 'gratuito', cercania: 1, distancia: 1.8, active: true, nombre: 'Doneria'},
     {id: 3, plan: 'gratuito', cercania: 2, distancia: 10, active: true, nombre: 'Veterinaria'},
@@ -18,14 +19,23 @@ export class LugaresService{
     return this.afDB.list('lugares/');
   }
   public buscarLugar(id) {
-    return this.lugares.filter((lugar) => {return lugar.id == id})[0] || null;
+    return this.lugares.filter((lugar) => lugar.id == id)[0] || null;
   }
-  public guardarLugar(lugar){
-    console.log(lugar);
+  public guardarLugar(lugar) {
+    // this.afDB.database.ref('lugares/' + lugar.id).set(lugar);
+    const headers = new Headers({"Content-Type": "application/json"});
+    return this.http.post(this.API_ENDPOINT+'/lugares.json', lugar, {headers: HttpHeaders}).subscribe();
+  }
+
+  public editarLugar(lugar) {
     this.afDB.database.ref('lugares/' + lugar.id).set(lugar);
   }
 
   public obtenerGeoData(direccion) {
     return this.http.get('https://maps.google.com/maps/api/geocode/json?address=' + direccion);
+  }
+
+  public getLugar(id) {
+    return this.afDB.object('lugares/' + id);
   }
 }
