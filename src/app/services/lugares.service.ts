@@ -2,29 +2,32 @@ import {Injectable} from '@angular/core';
 import {AngularFireDatabase} from 'angularfire2/database';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {GeoInterface} from '../interface/response-geoapi.interface';
+import {map} from 'rxjs/operators';
+import { RequestOptions } from '@angular/http';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class LugaresService {
   API_ENDPOINT = 'https://novasquare-a0841.firebaseio.com';
-  lugares: any = [
-    {id: 1, plan: 'pagado', cercania: 1, distancia: 1, active: false, nombre: 'Floreria'},
-    {id: 2, plan: 'gratuito', cercania: 1, distancia: 1.8, active: true, nombre: 'Doneria'},
-    {id: 3, plan: 'gratuito', cercania: 2, distancia: 10, active: true, nombre: 'Veterinaria'},
-    {id: 4, plan: 'pagado', cercania: 3, distancia: 35, active: false, nombre: 'Restaurante'},
-    {id: 5, plan: 'gratuito', cercania: 3, distancia: 120, active: true, nombre: 'Mercado'}
-  ];
+  lugares: any = [];
 
   constructor(private afDB: AngularFireDatabase, private http: HttpClient) { }
   public getLugares() {
-    return this.afDB.list('lugares/');
+    // return this.afDB.list('lugares/');
+    return this.http.get(this.API_ENDPOINT + '/.json')
+      .pipe(map((resultado) => {
+          const data = resultado.json().lugares;
+          return data;
+        })
+      );
   }
   public buscarLugar(id) {
-    return this.lugares.filter((lugar) => lugar.id == id)[0] || null;
+    return this.lugares.filter((lugar) => {return lugar.id == id})[0] || null;
   }
   public guardarLugar(lugar) {
     // this.afDB.database.ref('lugares/' + lugar.id).set(lugar);
-    const headers = new Headers({"Content-Type": "application/json"});
-    return this.http.post(this.API_ENDPOINT+'/lugares.json', lugar, {headers: HttpHeaders}).subscribe();
+    const headers = new HttpHeaders({'Content-Type': 'application/json'});
+    return this.http.post(this.API_ENDPOINT + '/lugares.json ', lugar, {headers : HttpHeaders}).subscribe();
   }
 
   public editarLugar(lugar) {
